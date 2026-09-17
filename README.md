@@ -144,13 +144,23 @@ trained checkpoints; the extracted values and plots are in
 | --- | --- |
 | `tso_ablation_plan.csv` / `.json` | full experiment matrix of the training-strategy selection |
 | `all_ablation_summary_best.csv` | best-epoch P/R/mAP50/mAP50-95 for every ablation run |
+| `final_all_compare_summary.csv` | best-epoch metrics for the scale/model-family comparison (YOLOv5s/v8s/v8m/v8l/v10s and their BiFPN / BiFPN-TSO variants); source of the YOLOv8-BiFPN-only row in the paper's ablation table |
 | `difficulty_subset_validation_final.csv` | baseline vs. ours on the six difficult subsets (`YOLOv8m_baseline` = pretrained-YOLOv8m run, `Old_BiFPN_TSO` = 150-epoch BiFPN+TSO run, `B4_BiFPN_MixUp` = final model) |
 | `val_image_difficulty.csv`, `val_subsets/`, `val_subsets_summary.csv` | per-image difficulty statistics and the top-100 subset lists |
 | `bifpn_generalization_summary.csv` | BiFPN / BiFPN-TSO deltas at YOLOv8-s/m/l scale |
-| `uavdt/uavdt.yaml`, `uavdt/uavdt_generalization_summary.csv` | UAVDT configuration and the extracted per-epoch best metrics of the two generalization runs (baseline 0.602 vs. ours 0.614 mAP50-95, as logged per epoch with 3-decimal rounding; paper reports 60.22 / 61.36 from the full-precision results.csv) |
+| `uavdt/uavdt.yaml`, `uavdt/uavdt_generalization_summary.csv` | UAVDT configuration and the best mAP50-95 epoch of each generalization run, extracted from the training log (baseline epoch 74: 0.883/0.602; ours epoch 65: 0.896/0.614; 3-decimal log rounding, paper Table reports 60.22 / 61.36 from full-precision results.csv) |
 | `efficiency_compare/` | params, GFLOPs, per-stage latency, FPS @ val 1024 for all compared methods |
-| `attention_compare/` | CBAM / ECA / C3TR comparison summaries |
+| `attention_compare/` | CBAM / ECA / C3TR / YOLO11m / RT-DETR-l comparison summaries (source of the paper's mainstream-comparison and attention tables) |
 | `bifpn_weight_analysis/` | learned fusion-weight tables, bar chart, direction-contribution figure |
+
+Note on metric sources: the paper's comparison tables report **best-epoch**
+values (as in `all_ablation_summary_best.csv`, `final_all_compare_summary.csv`,
+and `final_attention_vs_ours_summary.csv`), while
+`efficiency_compare/final_efficiency_comparison_val1024.csv` re-validates every
+weight in a single session at val @1024 to measure params/GFLOPs/latency/FPS.
+Its mAP values can differ from the best-epoch tables by up to ~0.15 pp
+(e.g. CBAM 51.70 vs 51.72); this is a re-validation effect, not an
+inconsistency in the underlying runs.
 
 ## Data availability
 
