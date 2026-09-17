@@ -1,0 +1,16 @@
+# runs / weights
+runs/
+*.pt
+*.onnx
+*.engine
+
+# dataset working dirs (never commit data)
+dataset/VisDrone2019-DET-*/
+dataset/UAVDT/
+dataset/.ultralytics/
+
+# local ultralytics config + caches
+.ultralytics/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/

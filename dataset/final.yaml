@@ -1,0 +1,15 @@
+names:
+- pedestrian
+- people
+- bicycle
+- car
+- van
+- truck
+- tricycle
+- awning-tricycle
+- bus
+- motor
+nc: 10
+path: /root/dataset
+train: VisDrone2019-DET-train/images
+val: VisDrone2019-DET-val/images

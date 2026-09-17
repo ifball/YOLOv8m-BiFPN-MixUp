@@ -1,0 +1,8 @@
+method,params_M,GFLOPs,precision,recall,mAP50,mAP50-95,delta_mAP50_vs_final,delta_mAP50-95_vs_final,inference_ms,total_ms_per_image,FPS,preprocess_ms,postprocess_ms,weight
+YOLOv8m baseline,25.862,202.5,0.6071,0.5161,0.5237,0.3245,-0.0221,-0.0149,14.01,16.03,62.37,1.01,1.01,/root/autodl-tmp/ifball_uav/runs/detect/visdrone_verify_80ep2/weights/best.pt
+YOLOv8m+CBAM,26.047,202.9,0.6282,0.4998,0.5170,0.3157,-0.0288,-0.0237,7.68,13.46,74.32,1.09,4.69,/root/autodl-tmp/ifball_uav/runs/attention_compare/visdrone_yolov8m_cbam_80ep/weights/best.pt
+YOLOv8m+ECA,25.862,202.5,0.6195,0.5100,0.5197,0.3171,-0.0261,-0.0223,7.63,14.99,66.72,1.03,6.33,/root/autodl-tmp/ifball_uav/runs/attention_compare/visdrone_yolov8m_eca_80ep/weights/best.pt
+YOLOv8m+C3TR,24.121,197.5,0.6335,0.5199,0.5359,0.3309,-0.0099,-0.0085,7.56,15.05,66.46,1.03,6.46,/root/autodl-tmp/ifball_uav/runs/attention_compare/visdrone_yolov8m_c3tr_80ep/weights/best.pt
+YOLOv8m+BiFPN+MixUp,25.862,202.5,0.6369,0.5271,0.5458,0.3394,+0.0000,+0.0000,7.97,12.89,77.58,1.00,3.91,/root/autodl-tmp/ifball_uav/runs/detect_sci4/sci4_B4_bifpn_mixup/weights/best.pt
+YOLO11m,20.061,174.7,0.6463,0.5480,0.5587,0.3477,+0.0129,+0.0083,7.81,14.91,67.09,1.06,6.04,/root/autodl-tmp/ifball_uav/runs/frontier_compare/visdrone_yolo11m_80ep/weights/best.pt
+RT-DETR-l,32.827,271.2,0.6675,0.5604,0.5345,0.3363,-0.0113,-0.0031,18.07,24.23,41.27,1.72,4.44,/root/autodl-tmp/ifball_uav/runs/frontier_compare/visdrone_rtdetr_l_80ep/weights/best.pt

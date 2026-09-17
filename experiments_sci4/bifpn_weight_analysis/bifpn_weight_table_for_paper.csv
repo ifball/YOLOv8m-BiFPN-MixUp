@@ -1,0 +1,5 @@
+node,fusion_direction,input_1,input_2,normalized_input_1,normalized_input_2,dominant_input,dominant_weight
+Node 1,Top-down P5->P4 fusion,P5 upsampled feature,P4 backbone feature,0.4686,0.5314,P4 backbone feature,0.5314
+Node 2,Top-down P4->P3 fusion,P4_td upsampled feature,P3 backbone feature,0.4621,0.5379,P3 backbone feature,0.5379
+Node 3,Bottom-up P3->P4 fusion,P3_out downsampled feature,P4_td feature,0.6111,0.3888,P3_out downsampled feature,0.6111
+Node 4,Bottom-up P4->P5 fusion,P4_out downsampled feature,P5 backbone/SPPF feature,0.6082,0.3917,P4_out downsampled feature,0.6082

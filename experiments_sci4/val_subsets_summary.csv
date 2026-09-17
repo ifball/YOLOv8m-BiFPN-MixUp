@@ -1,0 +1,7 @@
+subset,images,objects,tiny_objects,small_objects,occluded_objects,severe_occluded_objects,truncated_objects
+tiny_heavy_top100.txt,100,13975,10844,13858,8341,951,371
+small_heavy_top100.txt,100,14240,10539,14092,8499,952,391
+occlusion_top100.txt,100,13557,9984,13415,9055,1140,407
+severe_occlusion_top100.txt,100,10055,7203,9904,6914,1739,326
+truncation_top100.txt,100,10091,6676,9833,5662,671,744
+crowded_top100.txt,100,14244,10522,14091,8518,955,394

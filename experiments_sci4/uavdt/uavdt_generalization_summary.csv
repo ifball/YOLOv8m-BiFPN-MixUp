@@ -1,0 +1,3 @@
+run,epochs_validated,best_mAP50,mAP50-95_at_best_mAP50,best_mAP50-95,mAP50_at_best_mAP50-95
+UAVDT baseline YOLOv8m,81,0.8960,0.5980,0.6020,0.8830
+UAVDT B4 BiFPN+MixUp,81,0.8980,0.6060,0.6140,0.8960

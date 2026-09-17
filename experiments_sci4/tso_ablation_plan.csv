@@ -1,0 +1,15 @@
+experiment,epochs,imgsz,batch,model_yaml,pretrained,optimizer,lr0,warmup_epochs,close_mosaic,mixup,mosaic,cos_lr,bifpn,output_name
+A0_yolov8m_baseline_recheck,80,1024,8,src/yolov8m.yaml_or_pretrained_yolov8m.pt,src/yolov8m.pt,AdamW,0.0005,0,0,0.0,1.0,False,False,sci4_A0_yolov8m_baseline_recheck
+A1_sgd_only,80,1024,8,src/yolov8m.yaml_or_pretrained_yolov8m.pt,src/yolov8m.pt,SGD,0.005,0,0,0.0,1.0,True,False,sci4_A1_sgd_only
+A2_warmup_only,80,1024,8,src/yolov8m.yaml_or_pretrained_yolov8m.pt,src/yolov8m.pt,AdamW,0.0005,5,0,0.0,1.0,False,False,sci4_A2_warmup_only
+A3_close_mosaic_only,80,1024,8,src/yolov8m.yaml_or_pretrained_yolov8m.pt,src/yolov8m.pt,AdamW,0.0005,0,15,0.0,1.0,False,False,sci4_A3_close_mosaic_only
+A4_mixup_only,80,1024,8,src/yolov8m.yaml_or_pretrained_yolov8m.pt,src/yolov8m.pt,AdamW,0.0005,0,0,0.1,1.0,False,False,sci4_A4_mixup_only
+A5_sgd_warmup,80,1024,8,src/yolov8m.yaml_or_pretrained_yolov8m.pt,src/yolov8m.pt,SGD,0.005,5,0,0.0,1.0,True,False,sci4_A5_sgd_warmup
+A6_sgd_warmup_close_mosaic,80,1024,8,src/yolov8m.yaml_or_pretrained_yolov8m.pt,src/yolov8m.pt,SGD,0.005,5,15,0.0,1.0,True,False,sci4_A6_sgd_warmup_close_mosaic
+A7_tso_all_no_bifpn,80,1024,8,src/yolov8m.yaml_or_pretrained_yolov8m.pt,src/yolov8m.pt,SGD,0.005,5,15,0.1,1.0,True,False,sci4_A7_tso_all_no_bifpn
+B0_bifpn_only,80,1024,8,src/yolov8m-bifpn.yaml,src/yolov8m.pt,AdamW,0.0005,0,0,0.0,1.0,False,True,sci4_B0_bifpn_only
+B1_bifpn_sgd,80,1024,8,src/yolov8m-bifpn.yaml,src/yolov8m.pt,SGD,0.005,0,0,0.0,1.0,True,True,sci4_B1_bifpn_sgd
+B2_bifpn_warmup,80,1024,8,src/yolov8m-bifpn.yaml,src/yolov8m.pt,AdamW,0.0005,5,0,0.0,1.0,False,True,sci4_B2_bifpn_warmup
+B3_bifpn_close_mosaic,80,1024,8,src/yolov8m-bifpn.yaml,src/yolov8m.pt,AdamW,0.0005,0,15,0.0,1.0,False,True,sci4_B3_bifpn_close_mosaic
+B4_bifpn_mixup,80,1024,8,src/yolov8m-bifpn.yaml,src/yolov8m.pt,AdamW,0.0005,0,0,0.1,1.0,False,True,sci4_B4_bifpn_mixup
+B5_bifpn_tso_all_150ep,150,1024,8,src/yolov8m-bifpn.yaml,src/yolov8m.pt,SGD,0.005,5,15,0.1,1.0,True,True,sci4_B5_bifpn_tso_all_150ep
